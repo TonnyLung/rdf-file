@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.alipay.rdf.file</groupId>
+	<artifactId>rdf-file</artifactId>
+	<version>2.0.0</version>
+	<name>RDF FILE</name>
+	<packaging>pom</packaging>
+
+	<url>https://github.com/alipay/rdf-file</url>
+
+	<properties>
+		<rdf.file.core.version>2.2.6</rdf.file.core.version>
+		<rdf.file.oss.version>2.2.6</rdf.file.oss.version>
+		<rdf.file.sftp.version>2.2.6</rdf.file.sftp.version>
+	</properties>
+
+	<modules>
+		<module>rdf-file-core</module>
+		<module>rdf-file-oss</module>
+		<module>rdf-file-sftp</module>
+		<module>rdf-file-test</module>
+	</modules>
+
+	<licenses>
+		<license>
+			<name>The Apache License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+		</license>
+	</licenses>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.alipay.rdf.file</groupId>
+				<artifactId>rdf-file-core</artifactId>
+				<version>${rdf.file.core.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.alipay.rdf.file</groupId>
+				<artifactId>rdf-file-oss</artifactId>
+				<version>${rdf.file.oss.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.alipay.rdf.file</groupId>
+				<artifactId>rdf-file-sftp</artifactId>
+				<version>${rdf.file.sftp.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.alipay.rdf.file</groupId>
+				<artifactId>rdf-file-test</artifactId>
+				<version>2.0.0</version>
+			</dependency>
+
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>4.8.2</version>
+				<scope>test</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.0.2</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.0.2</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+	<developers>
+		<developer>
+			<id>zhanqiu</id>
+			<name>斩秋</name>
+			<email>hongwei.quhw@antfin.com</email>
+		</developer>
+		<developer>
+			<id>chongyang</id>
+			<name>重扬</name>
+			<email>haofan.whf@alibaba-inc.com</email>
+		</developer>
+	</developers>
+
+	<scm>
+		<connection>scm:git:git@github.com:alipay/rdf-file.git</connection>
+		<developerConnection>scm:git:ssh://github.com:alipay/rdf-file.git</developerConnection>
+		<url>https://github.com/alipay/rdf-file/tree/master</url>
+	</scm>
+</project>
