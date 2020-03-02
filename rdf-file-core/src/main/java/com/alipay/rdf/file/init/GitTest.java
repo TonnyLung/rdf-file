@@ -6,4 +6,7 @@ package com.alipay.rdf.file.init;
  * @Description
  */
 public class GitTest {
+    public static void main(String[] args) {
+        System.out.println("开发了一个新功能需要合并到develop版本");
+    }
 }
